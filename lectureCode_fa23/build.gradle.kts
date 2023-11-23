@@ -37,19 +37,22 @@ tasks.withType<Tar> {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE // 或者使用其他策略
 }
 
+
+
 dependencies {
+//    implementation("org.junit.jupiter:junit-jupiter:5.8.1")
+//    implementation("org.testng:testng:7.1.0")
+//    implementation("org.testng:testng:7.1.0")
     // Use JUnit test framework.
     testImplementation("junit:junit:4.13.2")
-
+    implementation("junit:junit:4.13.2")
     // This dependency is used by the application.
     implementation("com.google.guava:guava:30.1.1-jre")
 
     // cs61b 的 library
     implementation(fileTree("../library-fa23") {
         include("*.jar")
-        // exclude("failureaccess-1.0.1.jar",
-        // "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
-        // )
+        // exclude("failureaccess-1.0.1.jar")
         }
     )
     
@@ -68,4 +71,9 @@ sourceSets {
             setSrcDirs(files("src/main/java")) // 设置为实际的源代码目录
         }
     }
+}
+
+tasks.withType<JavaCompile> {
+//    文件编码格式为 utf-8
+    options.encoding = "utf-8"
 }

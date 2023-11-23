@@ -1,18 +1,6 @@
 // 为什么要更现代的写法
 package lec2_intro2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-
-import org.apache.bcel.verifier.statics.IntList;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 
 
 // !!! 更现代的写法，限制 list 中的类型
